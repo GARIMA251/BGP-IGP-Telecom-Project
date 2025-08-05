@@ -12,8 +12,8 @@ The project aims to solve real-world telecom network challenges by combining bot
 
 The network consists of a series of routers, each configured with **BGP** and **OSPF** for routing, and **PCs** to simulate end-user connectivity. The topology is as follows:
 
-- **Router 1 (AS 65001)** connects to **Router 3 (AS 65010)** using **BGP** for inter-AS communication.
-- **Router 2 (AS 65002)** connects to **Router 6 (AS 65002)** also using **BGP** for inter-AS communication.
+- **Router 1** connects to **Router 3** using **BGP** for inter-AS communication.
+- **Router 2** connects to **Router 6** also using **BGP** for inter-AS communication.
 - **Routers 3, 4, 5, and 6** use **OSPF** to establish routing within their own respective AS.
 
 The network is designed to simulate a **telecom backbone** by connecting routers across different ASes while ensuring internal routing within each AS using OSPF.
@@ -22,32 +22,30 @@ The network is designed to simulate a **telecom backbone** by connecting routers
 
 - **BGP (Border Gateway Protocol)**: 
   - **Used for inter-domain communication**, specifically for routing between **different Autonomous Systems (AS)**. This ensures that data can be routed across different networks that are administratively separate but still need to communicate.
-  - Configured between **Router 1 (AS 65001)** and **Router 3 (AS 65010)**, and between **Router 2 (AS 65002)** and **Router 6 (AS 65002)**.
 
 - **OSPF (Open Shortest Path First)**: 
   - **Used for intra-domain communication** within a single AS. It ensures efficient and loop-free routing between routers in the same AS.
-  - Configured between **Routers 3, 4, 5, and 6**, creating an internal backbone network for routing.
 
 ### **3. Tools and Technologies Used**
 
 - **Cisco Packet Tracer**: The simulation software used to design and test the network topology.
 - **Cisco CLI Commands**: Used for configuring BGP, OSPF, and interfaces, as well as for troubleshooting and verifying network status.
-- **Ping/Traceroute**: For testing connectivity between devices and visualizing the routing path.
+- **Ping**: For testing connectivity between devices and visualizing the routing path.
 
 ### **4. Configuration Files and Resources**
 
-- **routers_and_bgp_igp_config.txt**: Contains the complete CLI configuration for both **BGP** and **OSPF** setups across all routers. This is the core configuration file that can be used to replicate the setup.
-- **bgp_summary_screenshot.png**: A screenshot showing the output of the `show ip bgp summary` command, displaying the status of BGP neighbor relationships.
-- **network_topology.png**: A visual diagram of the network topology, showing how the routers, switches, and PCs are interconnected.
+- **network_topology.png**: Visual representation of the network design.
+- **bgp_ospf_configuration_verification.pdf**: Contains the configuration commands for setting up BGP and OSPF.
+- **routers_bgp_ospf_config.txt**: Configuration text file with detailed router configurations for BGP and OSPF.
+- **project_approach.pdf**: Describes the methodology and approach followed during the project.
 
-## **Testing & Validation**
+## Getting Started
+To get started, follow these steps:
+1. Review the `routers_bgp_ospf_config.txt`for detailed router configurations.
+2. Study the `network_topology.png` to understand the project design.
+3. Run the configuration commands provided in `bgp_ospf_commands.pdf`in Cisco Packet Tracer or a similar tool.
+4. Check the `project_approach.pdf` for a step-by-step guide on how the project was executed.
 
-### **Ping Test**
+## License
 
-To test the connectivity between **PC1** and **PC2**:
-
-```bash
-ping 10.1.1.2
-
-ping 10.2.1.2
-
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
