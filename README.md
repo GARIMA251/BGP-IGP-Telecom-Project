@@ -43,7 +43,7 @@ The network is designed to simulate a **telecom backbone** by connecting routers
 To get started, follow these steps:
 1. Review the `routers_bgp_ospf_config.txt`for detailed router configurations.
 2. Study the `network_topology.png` to understand the project design.
-3. Run the configuration commands provided in `bgp_ospf_commands.pdf`in Cisco Packet Tracer or a similar tool.
+3. Run the configuration commands provided in `bgp_ospf_configuration_verification.pdf`in Cisco Packet Tracer or a similar tool.
 4. Check the `project_approach.pdf` for a step-by-step guide on how the project was executed.
 
 ## License
